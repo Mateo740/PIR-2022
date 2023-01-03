@@ -1,4 +1,11 @@
 
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan  3 12:39:39 2023
+
+@author: legatpauline
+"""
 
 # On simule un appel à la fmu
 #d_init= 0 m
@@ -93,10 +100,15 @@ for k in range (4,len(V2)-1):
         m = k
     G.add_node(V2[k], level=l)
 
-    
+
 # rajout point final au graphe
 
-G.add_node(V2[-1],level=l+1)
+last=l+1
+
+last_V= V2[-1]
+
+
+G.add_node(last_V,level=last)
 
 print (G.nodes())
 
