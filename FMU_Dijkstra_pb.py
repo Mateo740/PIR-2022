@@ -96,7 +96,7 @@ for k in range (4,len(V2)):
 # rajout point final au graphe
 
 
-G.add_node(V2[-1],level=l)
+G.add_node(V2[-1],level=l+1)
 
 print (G.nodes())
 
