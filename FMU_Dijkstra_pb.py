@@ -71,13 +71,15 @@ k=1
 
 
 
-#Rajout point départ + connexion aux 3 vitesses de départ
+#Rajout valeurs point départ + connexion aux 3 vitesses de départ
 
 DFINAL = D2[-1]+100
 
 V2= np.concatenate(([30],V2,[30]))
 C2= np.concatenate(([1],C2,[-1]))
 D2= np.concatenate(([-100],D2,[DFINAL]))
+
+#rajout point de départ au graphe
 
 G.add_node(V2[0],level=0)
 
@@ -109,6 +111,9 @@ last_V= V2[-1]
 
 
 G.add_node(last_V,level=last)
+
+
+#je comprends pas pourquoi ça veut pas, prcq quand je print ça me sort les bons last levels et last vitesses... aucune idée de pourquoi ce node ne veut pas s'ajouter
 
 print (G.nodes())
 
