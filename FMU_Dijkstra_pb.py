@@ -87,14 +87,14 @@ i=0
 #avec m le nombre de vitesses différentes sur le niveau de branches précédent
 #avec l le niveau (=level)
 
-for k in range (4,len(V2)):
+for k in range (4,len(V2)-1):
     if k == m*2+3:
         l+=1
         m = k
     G.add_node(V2[k], level=l)
 
+    
 # rajout point final au graphe
-
 
 G.add_node(V2[-1],level=l+1)
 
