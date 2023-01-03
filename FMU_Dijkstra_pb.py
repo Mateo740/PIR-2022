@@ -160,9 +160,15 @@ plt.title("Graphe des vitesses")
 plt.show()
 
 
-p1 = nx.shortest_path(G, source=V2[0], target=V2[-1], weight="weight")
-consumption = nx.shortest_path_length(G, source=0, target=9, weight="weight")
+p1 = nx.dijkstra_path(G, source=V2[0], target=V2[-1], weight="weight")
+consumption = nx.dijkstra_path_length(G, source=0, target=9, weight="weight")
 print("The shortest path from 0 to 9: " , p1)
 print("The lowest consumption is", round(consumption,2)) #arrondi au dixième
+
+#ou j'ai trouvé ça qui peut être bien (mais considérant multi sources pas multi target
+
+#p1 = nx.multi_source_dijkstra_path(G, source=[V2[1],V2[2],V2[3]], target=V2[-1], weight="weight")
+#consumption = nx.multi_source_dijkstra_path_length(G, source=0, target=9, weight="weight")
+
 
 plt.show()
